@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Materias</title>
+    <link rel="stylesheet" href="../Styles/paginaPrincipal.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Mis Materias</h1>
+        <div class="user-info">
+            <span class="user-email" id="userEmail">Cargando...</span>
+            <button class="logout-btn" id="logoutBtn">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Botón agregar materia -->
+        <button class="add-subject-btn" id="addSubjectBtn">
+            Agregar Materia
+        </button>
+
+        <!-- Lista de materias -->
+        <div class="subjects-container" id="subjectsContainer">
+            <!-- Las materias se cargarán aquí dinámicamente -->
+            <div class="empty-state" id="emptyState">
+                <h3>No tienes materias agregadas</h3>
+                <p>Haz clic en "Agregar Materia" para comenzar a organizar tus notas por materias.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar materia -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Agregar Nueva Materia</h2>
+                <p>Ingresa el nombre de la materia</p>
+            </div>
+
+            <div class="error-message" id="errorMessage">
+                Por favor, ingresa un nombre válido para la materia.
+            </div>
+
+            <form id="addSubjectForm">
+                <div class="form-group">
+                    <label for="subjectName">Nombre de la materia</label>
+                    <input 
+                        type="text" 
+                        id="subjectName" 
+                        name="subjectName" 
+                        placeholder="Ej: Matemáticas, Historia, Inglés..."
+                        required
+                        maxlength="50"
+                    >
+                </div>
+
+                <div class="modal-buttons">
+                    <button type="button" class="btn-cancel" id="cancelBtn">Cancelar</button>
+                    <button type="submit" class="btn-save" id="saveBtn">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initMainPage } from '../Services/MainPageService.js';
+        
+        // Inicializar la página principal cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', () => {
+            initMainPage();
+        });
+    </script>
+</body>
+</html>
