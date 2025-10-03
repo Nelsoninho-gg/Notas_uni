@@ -1,0 +1,29 @@
+{
+  "name": "notas-uni",
+  "version": "1.0.0",
+  "description": "Sistema de gestión de notas universitarias con Firebase",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step needed for static site'",
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "notas",
+    "universidad",
+    "firebase",
+    "firestore",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^10.7.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

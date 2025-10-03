@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/Vistas/login.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/Vistas/login.html"
+    },
+    {
+      "source": "/register",
+      "destination": "/Vistas/register.html"
+    },
+    {
+      "source": "/principal",
+      "destination": "/Vistas/paginaPrincipal.html"
+    },
+    {
+      "source": "/notas",
+      "destination": "/Vistas/subjectNotes.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

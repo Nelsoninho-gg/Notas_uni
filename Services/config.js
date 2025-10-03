@@ -13,9 +13,10 @@ export const firebaseConfig = {
 
 // URLs de redirección (puedes modificar según tus necesidades)
 export const routes = {
-    login: 'login.html',
-    register: 'register.html',
-    mainPage: 'paginaPrincipal.html'
+    login: '/Vistas/login.html',
+    register: '/Vistas/register.html',
+    mainPage: '/Vistas/paginaPrincipal.html',
+    subjectNotes: '/Vistas/subjectNotes.html'
 };
 
 // Configuración de validación
