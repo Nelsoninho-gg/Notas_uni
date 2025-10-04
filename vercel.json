@@ -1,7 +1,6 @@
 {
-  "version": 2,
-  "cleanUrls": true,
-  "trailingSlash": false,
+  "buildCommand": null,
+  "outputDirectory": ".",
   "rewrites": [
     {
       "source": "/",
@@ -22,17 +21,6 @@
     {
       "source": "/notas",
       "destination": "/Vistas/subjectNotes.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
     }
   ]
 }
